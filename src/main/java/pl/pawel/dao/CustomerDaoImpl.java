@@ -21,7 +21,7 @@ public class CustomerDaoImpl implements CustomerDao {
 
     @Override
     public List<Customer> getAllCustomers() {
-        TypedQuery<Customer> query = em.createQuery("select c from customer c", Customer.class);
+        TypedQuery<Customer> query = em.createQuery("select c from Customer c", Customer.class);
         return query.getResultList();
     }
 
