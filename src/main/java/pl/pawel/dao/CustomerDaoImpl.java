@@ -40,7 +40,7 @@ public class CustomerDaoImpl implements CustomerDao {
 
     @Override
     public Customer getCustomerById(int id) {
-        return null;
+        return em.find(Customer.class, id);
     }
 
     @Override
