@@ -6,9 +6,11 @@ import pl.pawel.entity.Customer;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Repository
+@Transactional
 public class CustomerDaoImpl implements CustomerDao {
 
     // == fields ==
@@ -27,7 +29,12 @@ public class CustomerDaoImpl implements CustomerDao {
     }
 
     @Override
-    public void saveCustomer(Customer customer) {
+    public void saveOrUpdateCustomer(Customer customer) {
+        if (customer.getId() == null) {
+            em.persist(customer);
+        }else {
+            em.merge(customer);
+        }
 
     }
 

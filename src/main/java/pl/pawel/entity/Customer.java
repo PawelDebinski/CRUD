@@ -11,7 +11,7 @@ public class Customer {
     // == fields ==
     @Id
     @GeneratedValue()
-    private int id;
+    private Long id;
 
     private String firstName;
 
@@ -23,7 +23,7 @@ public class Customer {
     public Customer() {}
 
     // == public methods ==
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
