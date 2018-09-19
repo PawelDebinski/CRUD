@@ -2,12 +2,15 @@
 <html lang="en" xmlns:th="http://thymeleaf.orh">
 <head>
     <meta charset="UTF-8">
-    <title>Index Page</title>
+    <title>Customer List</title>
 </head>
 
 <body>
 
-    <h1>Index Page</h1>
+    <h1> CRM - Customer Relationship Manager</h1>
+
+
+    <a href="add-customer">Add Customer</a>
 
     <table>
         <tr>
@@ -22,9 +25,6 @@
             <td th:text="${customer.email}"/>
         </tr>
     </table>
-
-
-
 
 </body>
 </html>

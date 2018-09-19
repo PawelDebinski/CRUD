@@ -19,6 +19,7 @@ public class CustomerDaoImpl implements CustomerDao {
     public CustomerDaoImpl() {
     }
 
+    // == public methods ==
     @Override
     public List<Customer> getAllCustomers() {
         TypedQuery<Customer> query = em.createQuery("select c from Customer c", Customer.class);
