@@ -8,7 +8,7 @@ public interface CustomerDao {
 
     List<Customer> getAllCustomers();
     void saveOrUpdateCustomer(Customer customer);
-    Customer getCustomerById(int id);
+    Customer getCustomerById(Long id);
     Customer getCustomerByName(String name);
-    void deleteCustomer(int id);
+    void deleteCustomer(Long id);
 }

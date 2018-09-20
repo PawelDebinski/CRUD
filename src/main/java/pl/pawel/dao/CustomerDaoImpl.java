@@ -39,7 +39,7 @@ public class CustomerDaoImpl implements CustomerDao {
     }
 
     @Override
-    public Customer getCustomerById(int id) {
+    public Customer getCustomerById(Long id) {
         return em.find(Customer.class, id);
     }
 
@@ -49,7 +49,7 @@ public class CustomerDaoImpl implements CustomerDao {
     }
 
     @Override
-    public void deleteCustomer(int id) {
+    public void deleteCustomer(Long id) {
         Customer customer = em.find(Customer.class, id);
         em.remove(customer);
     }

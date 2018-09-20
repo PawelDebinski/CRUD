@@ -10,7 +10,7 @@ public interface CustomerService {
 
     List<Customer> getAllCustomers();
     void addOrUpdateCustomer(Customer customer);
-    Customer getCustomerById(int id);
+    Customer getCustomerById(Long id);
     Customer getCustomerByName(String name);
-    void deleteCustomer(int id);
+    void deleteCustomer(Long id);
 }
