@@ -35,7 +35,6 @@ public class CustomerDaoImpl implements CustomerDao {
         }else {
             em.merge(customer);
         }
-
     }
 
     @Override
