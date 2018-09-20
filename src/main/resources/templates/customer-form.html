@@ -9,19 +9,23 @@
 
     <h1> CRM - Customer Relationship Manager</h1>
 
-    <form method="post">
+    <form method="post" modelAttribute="customer" action="saveCustomer" th:action="@{saveCustomer}">
         <table>
             <tr>
+            <input type="hidden" th:type="hidden" th:field="${customer.id}">
+            </tr>
+
+            <tr>
                 <td><label>First Name:</label></td>
-                <td><input type="text"></td>
+                <td><input type="text" th:field="${customer.firstName}"></td>
             </tr>
             <tr>
                 <td><label>Last Name:</label></td>
-                <td><input type="text"></td>
+                <td><input type="text" th:field="${customer.lastName}"></td>
             </tr>
             <tr>
                 <td><label>Email:</label></td>
-                <td><input type="text"></td>
+                <td><input type="text" th:field="${customer.email}"></td>
             </tr>
             <tr>
                 <td><input type="submit"></td>
